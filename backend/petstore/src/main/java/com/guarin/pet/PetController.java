@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.Optional;
 
 @RestController // Simplifies controller with automatic @ResponseBody
-@RequestMapping(path = "/briola/pets")
+@RequestMapping(path = "/guarin/pets")
 @CrossOrigin(origins = "http://localhost:5173")
 public class PetController {
 
@@ -46,7 +46,7 @@ public class PetController {
     @PutMapping("/{id}")
     public ResponseEntity<?> updatePet(@PathVariable Integer id, @RequestBody Pet pet) {
 
-        System.out.println("🔄 PUT /briola/pets/" + id + " received body: " + pet);
+        System.out.println("🔄 PUT /guarin/pets/" + id + " received body: " + pet);
 
         try {
             if (pet.getName() == null || pet.getName().trim().isEmpty()) {
